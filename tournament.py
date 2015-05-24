@@ -29,7 +29,7 @@ def deletePlayers():
     DB = psycopg2.connect("dbname=tournament")
     c = DB.cursor()
     c.execute("DELETE FROM players")
-    #resets prim key players&matches tables
+    # Resets prim key in the players&matches tables. 
     c.execute("ALTER SEQUENCE players_id_seq restart with 1")
     c.execute("ALTER SEQUENCE matches_id_seq restart with 1")
     DB.commit()
@@ -83,14 +83,15 @@ def playerStandings():
     """
     DB = psycopg2.connect("dbname=tournament")
     c = DB.cursor()
-    #create a view of id,name,matches
+    # Create a view of id,name, and number of matches each player has competed in.
     c.execute("CREATE VIEW num_matches as select players.id, players.name, count (matches.id) as matches from players left join matches on  players.id = matches.p1 or players.id = matches.p2 group by players.id")
-    #create a view of id and number of wins.
+    # Create a view of player id and number of wins.
     c.execute("CREATE VIEW num_wins as SELECT players.id, count(matches.winner) as wins FROM players left join matches on players.id = matches.winner GROUP by players.id order by wins desc")
-    #select from views for players standing
+    # Select from views tables to provide the players standings report.
     c.execute("SELECT num_matches.id, num_matches.name, num_wins.wins, num_matches.matches from num_matches, num_wins where num_matches.id = num_wins.id group by num_matches.id, num_matches.name, num_matches.matches, num_wins.wins order by num_matches.id asc")
     outp1 = c.fetchall()
     return outp1
+    # No DB.commit as views need to go away and can be recreated as needed with fresh data.
     DB.close()
 
 
@@ -105,9 +106,9 @@ def reportMatch(winner, loser):
     """
     DB = psycopg2.connect("dbname=tournament")
     c = DB.cursor()
-    #inserts the winner and loser into matches table.
+    # Inserts the winner and loser into matches table.
     c.execute("INSERT INTO matches (p1, p2) VALUES (%s, %s)", (winner, loser))
-    #updates the winner column
+    # Updates the winner column
     c.execute("update matches set winner = p1")
     DB.commit()
     DB.close()
@@ -130,21 +131,20 @@ def swissPairings():
     """
     DB = psycopg2.connect("dbname=tournament")
     c = DB.cursor()
-     #create a view of id,name,matches
+     # Create a view of id, name, and number of matches each player has competed in.
     c.execute("CREATE VIEW num_matches as select players.id, players.name, count (matches.id) as matches from players left join matches on  players.id = matches.p1 or players.id = matches.p2 group by players.id")
-    #create a view of the number of wins for each player
+    # Create a view of player id and number of wins.
     c.execute("CREATE VIEW num_wins as SELECT players.id, count(matches.winner) as wins FROM players left join matches on players.id = matches.winner GROUP by players.id order by wins desc")
-    #select from views for players standing
+    # Select from views for players standing now in descending order.
     c.execute("SELECT num_matches.id, num_matches.name, num_matches.matches, num_wins.wins from num_matches, num_wins where num_matches.id = num_wins.id group by num_matches.id, num_matches.name, num_matches.matches, num_wins.wins order by num_wins.wins desc")
-    #Need to pull standings for pairing order
+    # Pulls standings for pairing order
     output = c.fetchall()
     swiss_group = []
     
-    #Use range and len to build pairings list tuple
+    # Use range and len to build pairings list tuple for the swiss pair.
     for i in range(0, (len(output)) -1, 2):
         make_list = (output[i][0], output[i][1], output[i + 1][0], output[i + 1][1])
         swiss_group.append(make_list)
         
-
     return swiss_group
     DB.close()
