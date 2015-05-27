@@ -26,12 +26,6 @@
 9. Then type in \i tournament.sql. This will create the tournament database and tables.
 10. Now type in  python tournament_test.py in the Git Bash window. This will run the test script on the tournament.py module to insure that the module is working properly.
 11. Expected outcome of test is to see Success! All tests have pass! If not then something is not working as expected.
+12. You are now ready to track swiss style tournament games.
+***
 
-11. You are now ready to track swiss style tournament games.
-
-This is a test
-
-Another project
-
-'''
-''''''';
