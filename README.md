@@ -4,7 +4,7 @@
 
 ## Name of Project: Swiss Style Tournament
 
-# Description: * Blue Write a Python module that uses PostgreSQL database to keep track of players and matches in a swiss tournament.
+## Description: * Blue Write a Python module that uses PostgreSQL database to keep track of players and matches in a swiss tournament.
 ***
 ### Required Files
 **
@@ -14,7 +14,8 @@
 
 ####tournament_test.py \Contains the test code to verify that the tournamen.py and tournament.sql are valid.
 ***
-##What is needed to run the Tournament moduled
+## What is needed to run the Tournament moduled.
+1. Install Vagrant. Follow these instructions. [vagrant] (https://www.udacity.com/wiki/ud197/install-vagrant)
 
 
 This is a test
