@@ -17,7 +17,7 @@
 ## What is needed to run the tournament module.
 1. Install Vagrant. Follow these instructions. [vagrant] (https://www.udacity.com/wiki/ud197/install-vagrant)
 2. Clone the project from this Github repository. [project] (https://github.com/udacity/fullstack-nanodegree-vm)
-3. Open Git Bash and type in cd /vagrant/tournament. Then type in "vagrant up".
+3. Open Git Bash and type in *cd /vagrant/tournament*. Then type in "vagrant up".
 4. After the VM has loaded. Type in vagrant ssh. After you see a $ prompt, type in "cd /" then "ls".
 5. You will see a directory called vagrant. Type in "cd /vagrant/tournament". Type in "ls".
 6. You will see three existing versions of tournament.py, tournament.sql, and tournament_test.py
