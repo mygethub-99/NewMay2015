@@ -14,7 +14,7 @@
 
 #####tournament_test.py (Contains the test code to verify that the tournament.py and tournament.sql are valid.)
 ***
-## What is needed to run the tournament module.
+## Tournament database setup instructions.
 1. Install Vagrant. Follow these instructions. [vagrant] (https://www.udacity.com/wiki/ud197/install-vagrant)
 2. Clone the project from this Github repository. [project] (https://github.com/udacity/fullstack-nanodegree-vm)
 3. Open Git Bash and type in *cd /vagrant/tournament*. Then type in *vagrant up*.
