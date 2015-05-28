@@ -43,10 +43,10 @@
 
 ####| registerPlayer | populates players table with player id and name |
 
-###| playerStandings | Look to see how wins each player has |
+####| playerStandings | Look to see how wins each player has |
 
-###| reportMatch | Records the outcome of each match between players. |
+####| reportMatch | Records the outcome of each match between players. |
 
-###| swissPairings | Returns a list of player pairings for the next set of matches. |
+####| swissPairings | Returns a list of player pairings for the next set of matches. |
 
 ***
