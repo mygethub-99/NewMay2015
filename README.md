@@ -29,7 +29,7 @@
 12. Expected outcome of test is to see *Success! All tests have pass!* If not, then something is not working as expected.
 13. You are now ready to track swiss style tournament games.
 ***
-## List of tournament.py functions
+##List of tournament.py module functions.
 testDeleteMatches()
 testDelete()
 testCount()
@@ -38,3 +38,4 @@ testRegisterCountDelete()
 testStandingsBeforeMatches()
 testReportMatches()
 testPairings()
+print "Success! All tests pass!"
