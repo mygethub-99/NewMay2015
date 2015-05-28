@@ -4,10 +4,10 @@
 
 ## Name of Project: Swiss Style Tournament
 
-## Description: Write a Python module that uses PostgreSQL database to keep track of players and matches in a swiss tournament.
+### Description: Write a Python module that uses PostgreSQL database to keep track of players and matches in a swiss tournament.
 ***
 ### Required Files
-**
+
 ####tournament.py \Contains the python module for the tournament.
 
 ####tournament.sql \Contains the sql code that will create the database, talbes and the views needed to track the players and matches.
