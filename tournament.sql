@@ -31,3 +31,14 @@ create database tournament;
 		p2 INTEGER REFERENCES players,
 		winner INTEGER REFERENCES players
 		);
+
+--Create a view of player id, name, and matches.
+	CREATE VIEW num_matches as select players.id, players.name, 
+	count (matches.id) as matches from players left join matches 
+	on  players.id = matches.p1 or players.id = matches.p2 
+	group by players.id;
+
+--Create a view of player id and number of wins.
+	CREATE VIEW num_wins as SELECT players.id, count(matches.winner) 
+	as wins FROM players left join matches on players.id = matches.winner 
+	GROUP by players.id order by wins desc;
