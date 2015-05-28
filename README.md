@@ -28,6 +28,7 @@
 11. Now to test the tournament.py module. At the $ prompt in the tournament directory, type in *python tournament_test.py*. 
 12. Expected outcome of test is to see *Success! All tests have pass!* If not, then something is not working as expected.
 13. You are now ready to track swiss style tournament games.
+
 ***
 ##List of tournament.py module functions.
 testDeleteMatches()
