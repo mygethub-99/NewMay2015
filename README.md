@@ -8,7 +8,7 @@
 ***
 #### Required Files
 
-#####>tournament.py \Contains the python module for the tournament.
+#####> Level one tournament.py \Contains the python module for the tournament.
 
 #####>tournament.sql \Contains the sql code that will create the database, tables and views needed to track the players and matches.
 
