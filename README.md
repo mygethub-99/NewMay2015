@@ -31,7 +31,8 @@
 
 ***
 ##List of tournament.py module functions.
-testDeleteMatches()
+| Module | Function |
+testDeleteMatches
 testDelete()
 testCount()
 testRegister()
