@@ -10,7 +10,7 @@
 
 ####tournament.py \Contains the python module for the tournament.
 
-####tournament.sql \Contains the sql code that will create the database, talbes and the views needed to track the players and matches.
+####tournament.sql \Contains the sql code that will create the database, tables and views needed to track the players and matches.
 
 ####tournament_test.py \Contains the test code to verify that the tournamen.py and tournament.sql are valid.
 ***
