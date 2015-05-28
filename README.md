@@ -31,13 +31,18 @@
 
 ***
 ##List of tournament.py module functions.
-| Module | Function |
-| Connect | Connects python to database |
-| DeleteMatches| Clears old matches |
-| DeletePlayers | Clears old players |
-| CountPlayers | Counts number of players |
+###| Module | Function |
 
-testRegister()
+###| Connect | Connects python to database |
+
+###| DeleteMatches| Clears old matches |
+
+###| DeletePlayers | Clears old players |
+
+###| CountPlayers | Counts number of players |
+
+###testRegister()
+
 testRegisterCountDelete()
 testStandingsBeforeMatches()
 testReportMatches()
